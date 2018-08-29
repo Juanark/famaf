@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-#  ej1.py
+#  practica2.py
 #  
 #  Copyright 2018 Live System User <liveuser@localhost>
 #  
@@ -21,19 +21,15 @@
 #  MA 02110-1301, USA.
 #  
 #  
+
 from turtle import *
 
-def poligonos(poligono, largo):
-	for lados in range(poligono):
-		forward(50)
-		left(360/poligono)
+for techo in range(3): #Creamos el techo con la forma de un triangulo
+	forward(50)		   #Definimos el largo de cada linea
+	left(360/3)		   #Dividimos 360° en 3 para obtener la forma de un triangulo
 
-speed(0)
-lrg=1
-while(lrg>0):
-	lrg = int(raw_input("Ingrese un numero: "))
-	pol = int(raw_input("ingrese un numero de lados: "))
-	poligonos(pol, lrg)
-
-
+for cuadrado in range(4): 
+	forward(50)
+	right(360/4)
+	
 exitonclick()

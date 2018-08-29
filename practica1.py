@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-#  ej1.py
+#  practica1.py
 #  
 #  Copyright 2018 Live System User <liveuser@localhost>
 #  
@@ -21,19 +21,25 @@
 #  MA 02110-1301, USA.
 #  
 #  
+
 from turtle import *
 
-def poligonos(poligono, largo):
-	for lados in range(poligono):
-		forward(50)
-		left(360/poligono)
+def forma(lado, largo): #Definimos esta variable para que al llamarla dibuje un cuadrado
+	for lados in range (lado):
+		forward(largo)
+		left(360/lado)
 
-speed(0)
-lrg=1
-while(lrg>0):
-	lrg = int(raw_input("Ingrese un numero: "))
-	pol = int(raw_input("ingrese un numero de lados: "))
-	poligonos(pol, lrg)
+def loop(veces,lados, largo): #Creamos un loop para definir cuantas veces se repetira la secuencia
+	for sec in range (veces): 
+		forma(lados,largo)
+		forward(largo)
+
+lds=1
+while(lds>0):
+	lds = int(raw_input("Ingrese el numero de lados: "))
+	lrg = int(raw_input("Ingrese un numero para el largo: "))
+	vcs = int(raw_input("Ingrese cuantas veces se repetira: "))
+	loop(vcs, lds, lrg)
 
 
 exitonclick()
